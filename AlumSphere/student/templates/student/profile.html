@@ -11,16 +11,15 @@
 {% endblock %}
 
 {% block content %}
-<div class="card" style="width: 30rem;">
+<div class="card" style="width: 30rem;margin:10px;margin-bottom:60px ;padding:10px">
     <h2><b>Profile</b></h2>
     <div class="card-body">
       <h5 class="card-title"> <b>Name : </b>{{data.name}}</h5>
-      <p class="card-text"><b>USN : </b>{{data.usn}}
-    <br><b>Email : </b>{{data.email}}
-    <br><b>Email : </b>{{data.phone}}
-</p>
-    </div>
-    <h3><b>Skills</b></h3>
+      <p class="card-text"><b>Roll No. : </b>{{data.usn}}
+        <br><b>Email : </b>{{data.email}}
+        <br><b>Phone No : </b>{{data.phone}}
+      </p>
+    <h5 class="card-title"><b>Skills</b></h5>
     <ul class="list-group list-group-flush">
        
 {% for item in item %}
@@ -28,6 +27,6 @@
       {% endfor %}
       
     </ul>
-    
+  </div>
   </div>
 {% endblock %}

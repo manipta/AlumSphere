@@ -1,4 +1,4 @@
-<nav id="sidebarMenu" class="navbar-dark bg-dark col-md-3 col-lg-2 d-md-block sidebar-sticky collapse">
+<nav id="sidebarMenu" class="navbar-dark bg-dark col-md-3 col-lg-2 d-md-block sidebar-sticky collapse" style="display:flex">
     <div class="position-sticky pt-1">
         <div class="mb-4">
             <button class="btn bg-transparent align-items-center rounded collapsed" data-bs-toggle="collapse"
@@ -37,8 +37,8 @@
                         <span data-feather="users" class="me-3"></span>Alumni List
                     </a>
                 </li>
-                <li class="nav-item {% if request.resolver_match.url_name == 'list_alumni' %}active{% endif %}">
-                    <a class="nav-link {% if request.resolver_match.url_name == 'list_alumni' %}active{% endif %}"
+                <li class="nav-item {% if request.resolver_match.url_name == 'list_event' %}active{% endif %}">
+                    <a class="nav-link {% if request.resolver_match.url_name == 'list_event' %}active{% endif %}"
                         aria-current="page" href="{% url 'list_event' %}">
                         <span data-feather="bar-chart-2" class="me-3"></span>Event List
                     </a>
@@ -67,8 +67,8 @@
                                 <span data-feather="user-plus" class="me-3"></span> Add Alumnus
                             </a>
                         </li>
-                        <li class="nav-item {% if request.resolver_match.url_name == 'new_alumni' %}active{% endif %}">
-                            <a class="nav-link {% if request.resolver_match.url_name == 'new_alumni' %}active{% endif %}"
+                        <li class="nav-item {% if request.resolver_match.url_name == 'new_event' %}active{% endif %}">
+                            <a class="nav-link {% if request.resolver_match.url_name == 'new_event' %}active{% endif %}"
                                 aria-current="page" href="{% url 'new_event' %}">
                                 <span data-feather="bar-chart-2" class="me-3"></span> Add Event
                             </a>

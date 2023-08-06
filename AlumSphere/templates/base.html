@@ -12,12 +12,12 @@
     
 </head>
 
-<body style="background-image: url(''); background-repeat: no-repeat;
+<body style="background-color:#A1CCD1; background-repeat: no-repeat;
 background-attachment: cover;
 ">
     {% include 'tuheader.html' %}
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="{% url 'home' %}">Alumni Connect</a>
+    <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 shadow" style="background-color: #e3f2fd;">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" style="color:Gray;font-size:25px;margin-left:10px" href="{% url 'home' %}"><strong>HOME</strong></a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -29,8 +29,8 @@ background-attachment: cover;
         <div class="navbar-nav">
             {% if user.is_authenticated %}
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="{% url 'home' %}">
-                    {{ user.get_username }}
+                <a class="nav-link px-3"style="color:Gray;font-size:25px" href="{% url 'home' %}">
+                   <strong> {{ user.get_username }}</strong>
                 </a>
             </div>
             {% endif %}
@@ -39,11 +39,11 @@ background-attachment: cover;
         <div class="navbar-nav">
             {% if user.is_authenticated %}
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="{% url 'logout'%}?next=/">Log out</a>
+                <a class="nav-link px-3" style="color:Gray;font-size:25px" href="{% url 'logout'%}?next=/"><strong>LOG OUT</strong></a>
             </div>
             {% else %}
             <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="{% url 'login' %}?next=/">Log in</a>
+                <a class="nav-link px-3" style="color:Gray;font-size:25px" href="{% url 'login' %}?next=/"><strong>LOG IN</strong></a>
             </div>
             {% endif %}
         </div>
