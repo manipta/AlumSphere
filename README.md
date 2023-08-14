@@ -6,5 +6,12 @@
 • User data can be uploaded both manually and through CSV format.
 • Tech Stack:Django,Bootstrap.
 
+## Contributors
+
+- [Mani Garg](https://github.com/manipta) - Developer
+- [Jane Smith](https://github.com/janesmith) - Designer
+- [Alex Johnson](https://github.com/alexjohnson) - Tester
+
+
 
 
