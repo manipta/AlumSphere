@@ -8,9 +8,8 @@
 
 ## Contributors
 
-- [Mani Garg](https://github.com/manipta) - Developer
-- [Jane Smith](https://github.com/janesmith) - Designer
-- [Alex Johnson](https://github.com/alexjohnson) - Tester
+• [Mani Garg](https://github.com/manipta)
+• [Pratham Anand](https://github.com/Pratham-Anand) 
 
 
 
