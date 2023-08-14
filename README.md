@@ -6,6 +6,5 @@
 • User data can be uploaded both manually and through CSV format.
 • Tech Stack:Django,Bootstrap.
 
-Contributors:
-[![GitHub Contributors](https://img.shields.io/github/contributors/your-repo-name.svg)](https://github.com/your-profile/AlumSphere/graphs/contributors)
+
 
