@@ -118,7 +118,6 @@ DATABASES = {'default': dj_database_url.config()}
 #     and POSTGRES_HOST is not None
 #     and POSTGRES_PORT is not None
 # )
-
 # if POSTGRES_READY:
 #     DATABASES = {
 #         "default": {
