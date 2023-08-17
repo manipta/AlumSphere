@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from base import loggers
-#from . import config
+import dj_database_url
+from decouple import config
+# from . import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -87,17 +89,18 @@ WSGI_APPLICATION = "api.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresal',
-#         'NAME': 'AlumniConnect',
-#         'USER':'root',
-#         'PASSWORD':'Vignesh@9909',
-#         'HOST':'localhost',
-#         'PORT':'3306',
-#     }
-# }
-
+DATABASES = {
+    'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': 'AlumniConnect',
+        # 'USER':'root',
+        # 'PASSWORD':'Vignesh@9909',
+        # 'HOST':'localhost',
+        # 'PORT':'3306',
+    }
+    
+}
+DATABASES['default']=dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
