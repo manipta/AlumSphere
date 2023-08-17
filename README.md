@@ -6,7 +6,7 @@
 - User <strong>data can be uploaded</strong> both manually and through CSV format.
 - Tech Stack: <strong>Django</strong>, Bootstrap, JS, CSS and HTML
 ## Contributors
-
+ 
 - [Mani Garg](https://github.com/manipta)
 - [Pratham Anand](https://github.com/Pratham-Anand) 
 

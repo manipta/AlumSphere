@@ -3,3 +3,6 @@ psycopg2-binary
 numpy
 pandas
 matplotlib
+dj-database-url
+python-decouple
+python-dotenv

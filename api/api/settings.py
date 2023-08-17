@@ -13,8 +13,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from base import loggers
-#from . import config
-
+import dj_database_url
+from decouple import config
+# from . import config
+from dotenv import load_dotenv
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -86,18 +89,46 @@ WSGI_APPLICATION = "api.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+# DATABASE_URL="postgres://default:IvtG0VfFE7pc@ep-white-bush-14334645-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb"
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresal',
-#         'NAME': 'AlumniConnect',
-#         'USER':'root',
-#         'PASSWORD':'Vignesh@9909',
-#         'HOST':'localhost',
-#         'PORT':'3306',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'verceldb',
+#         'USER':'default',
+#         'PASSWORD':'IvtG0VfFE7pc',
+#         'HOST':'ep-white-bush-14334645-pooler.us-east-1.postgres.vercel-storage.com',
+#         # 'PORT':'3306',
 #     }
+    
 # }
 
+DATABASES = {'default': dj_database_url.config()}
+
+# POSTGRES_DB = os.environ.get("POSTGRES_DB") #database name
+# POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD") # database user password
+# POSTGRES_USER = os.environ.get("POSTGRES_USER") # database username
+# POSTGRES_HOST = os.environ.get("POSTGRES_HOST") # database host
+# POSTGRES_PORT = os.environ.get("POSTGRES_PORT") # database port
+
+
+# POSTGRES_READY = (
+#     POSTGRES_DB is not None
+#     and POSTGRES_PASSWORD is not None
+#     and POSTGRES_USER is not None
+#     and POSTGRES_HOST is not None
+#     and POSTGRES_PORT is not None
+# )
+# if POSTGRES_READY:
+#     DATABASES = {
+#         "default": {
+#             "ENGINE": "django.db.backends.postgresql",
+#             "NAME": POSTGRES_DB,
+#             "USER": POSTGRES_USER,
+#             "PASSWORD": POSTGRES_PASSWORD,
+#             "HOST": POSTGRES_HOST,
+#             "PORT": POSTGRES_PORT,
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
