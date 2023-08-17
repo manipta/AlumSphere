@@ -5,3 +5,4 @@ pandas
 matplotlib
 dj-database-url
 python-decouple
+python-dotenv
