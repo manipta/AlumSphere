@@ -134,13 +134,13 @@ def AlumniList(request):
     
         return render(request,"student/alsearch.html",)    
 
-def chatbot(request):
-    com=Job.objects.all().values('company_name').annotate(total=Count('id')).order_by('-total','company_name')[:1]
-    alumni=Alumni.objects.all().count()
-    uni=Higherstudies.objects.all().values('college_name').annotate(total=Count('id')).order_by('-total','college_name')[:1]
-    context={
-        'com':com,
-        'uni':uni,
-        'alumni':alumni,
-    }
-    return render(request,'student/chatbot.html',context) 
+# def chatbot(request):
+#     com=Job.objects.all().values('company_name').annotate(total=Count('id')).order_by('-total','company_name')[:1]
+#     alumni=Alumni.objects.all().count()
+#     uni=Higherstudies.objects.all().values('college_name').annotate(total=Count('id')).order_by('-total','college_name')[:1]
+#     context={
+#         'com':com,
+#         'uni':uni,
+#         'alumni':alumni,
+#     }
+#     return render(request,'student/chatbot.html',context) 
