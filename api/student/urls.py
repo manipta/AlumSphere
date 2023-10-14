@@ -17,6 +17,6 @@ urlpatterns = [
      path("skillfm",views.SkillView,name='skillfm'),
      path("sprofile",views.sprofile,name='sprofile'),
      path("alsearch",views.AlumniList,name='alsearch'),
-       path("chatbot",views.chatbot,name='chatbot'),
+      #  path("chatbot",views.chatbot,name='chatbot'),
 
 ]
